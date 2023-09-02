@@ -7,7 +7,7 @@ body {
   padding: 0;
   list-style: none;
   background-color: #f4dff4;
-  color: #792879;
+  color: #ad36ad;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
 }
@@ -48,7 +48,7 @@ header nav ul li a {
   border-bottom-width: 1px;
   border-left-width: 1px;
 }
-header nav ul li a:hover, header nav ul li a.active {
+header nav ul li a:hover, header nav ul li a:active {
   border: 2px solid #eee;
   border-radius: 20% 0;
   border-bottom-width: 1px;
@@ -70,7 +70,7 @@ header nav ul li a:hover, header nav ul li a.active {
   margin: 0 auto;
   text-align: center;
   color: #eee;
-  text-shadow: 1px -1px 3px #792879;
+  text-shadow: 1px -1px 3px #ad36ad;
   position: relative;
   z-index: 10;
   font-size: 1.5rem;
@@ -92,7 +92,35 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 .home div button:focus {
   outline: transparent;
-  box-shadow: 1px -1px 3px #792879;
+  box-shadow: 1px -1px 3px #ad36ad;
+}
+
+.services {
+  padding: 1vh 4vw;
+  background-color: #f4dff4;
+  color: #ad36ad;
+}
+.services h2 {
+  text-align: center;
+}
+.services > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+.services > div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.services > div img {
+  width: 100%;
+}
+.services > div ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

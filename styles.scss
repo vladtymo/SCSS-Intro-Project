@@ -6,7 +6,7 @@ $indentV: 1vh; // відступ вертикальний
 
 // змінна для кольору
 $bgDark: #792879;
-$fontDark: #792879;
+$fontDark: #ad36ad;
 $bgLight: lighten($bgDark, 60%);
 $fontLight: #eee;
 
@@ -36,7 +36,7 @@ $font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 // міксіна для роботи з flex
-@mixin flex($dir, $side) {
+@mixin flex($dir: row, $side) {
     display: flex;
     flex-direction: $dir;
     justify-content: $side;
@@ -95,7 +95,7 @@ header {
                     @include border(transparent, 20%);
 
                     &:hover,
-                    &.active {
+                    &:active {
                         @include border($fontLight, 20%);
                     }
                 }
@@ -138,6 +138,32 @@ header {
                 outline: transparent;
                 box-shadow: 1px -1px 3px $fontDark;
             }
+        }
+    }
+}
+
+.services {
+    padding: $indentV $indent;
+    @include colorLight();
+
+    h2 {
+        text-align: center;
+    }
+
+    >div {
+        @include flex($side: space-between);
+        gap: 30px;
+
+        div {
+            @include flex($dir: column, $side: start);
+        }
+        img {
+            width: 100%;
+        }
+        ol {
+            list-style-position: inside;
+            padding: 0;
+            margin: 0;
         }
     }
 }
