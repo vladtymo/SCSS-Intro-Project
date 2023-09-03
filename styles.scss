@@ -95,7 +95,7 @@ header {
                     @include border(transparent, 20%);
 
                     &:hover,
-                    &:active {
+                    &.active {
                         @include border($fontLight, 20%);
                     }
                 }
@@ -151,19 +151,15 @@ header {
     }
 
     >div {
-        @include flex($side: space-between);
-        gap: 30px;
+        @include flex(row, space-between);
+        gap: $indent;
 
-        div {
-            @include flex($dir: column, $side: start);
+        ol {
+            padding-left: 0;
+            list-style-position: inside;
         }
         img {
             width: 100%;
-        }
-        ol {
-            list-style-position: inside;
-            padding: 0;
-            margin: 0;
         }
     }
 }

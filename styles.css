@@ -48,7 +48,7 @@ header nav ul li a {
   border-bottom-width: 1px;
   border-left-width: 1px;
 }
-header nav ul li a:hover, header nav ul li a:active {
+header nav ul li a:hover, header nav ul li a.active {
   border: 2px solid #eee;
   border-radius: 20% 0;
   border-bottom-width: 1px;
@@ -107,20 +107,14 @@ header nav ul li a:hover, header nav ul li a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  gap: 4vw;
 }
-.services > div div {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.services > div ol {
+  padding-left: 0;
+  list-style-position: inside;
 }
 .services > div img {
   width: 100%;
-}
-.services > div ol {
-  list-style-position: inside;
-  padding: 0;
-  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
